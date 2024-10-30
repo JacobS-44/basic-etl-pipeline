@@ -2,11 +2,11 @@ import pandas as pd
 
 #Step 1: Extract
 def extract_sales():
-    sales_df = pd.read_csv('../Data_Engineering_Projects/data/raw/sales.csv')
+    sales_df = pd.read_csv('../simple_etl/data/raw/sales.csv')
     return sales_df
 
 def extract_users():
-    users_df = pd.read_csv('../Data_Engineering_Projects/data/raw/users.csv')
+    users_df = pd.read_csv('../simple_etl/data/raw/users.csv')
     return users_df
 
 
@@ -21,7 +21,7 @@ def transform_data(users_df, sales_df):
 
 #Step 3: Load
 def load_data(transformed_df):
-    transformed_df.to_csv('../Data_Engineering_Projects/data/processed/total_sales.csv', index=False)
+    transformed_df.to_csv('../simple_etl/data/processed/total_sales.csv', index=False)
     print("Data loaded successfully!")
 
 #Main ETL Function
